@@ -893,6 +893,89 @@ jabur launches as a **complete platform** rather than incrementally-built MVP be
 - **FR55**: Admins can access complete audit logs for security events, role changes, and payment transactions
 - **FR56**: Admins can read all data across roles for dispute resolution and fraud investigation (full read access)
 
+### Admin Comped Task Management
+
+**Purpose:** Enable admins to create complimentary (comped) tasks for partnership trials, sales demos, and creator training without client payment. Platform absorbs creator payout costs as customer acquisition or operational expense.
+
+**Core Functionality:**
+
+- **FR-ADMIN-01**: Admins can create comped task batches via Admin Dashboard
+- **FR-ADMIN-02**: Admins can select task type (Partnership Trial, Sales Demo, Creator Training)
+- **FR-ADMIN-03**: Admins must add business label for each batch (required, 100 character max)
+- **FR-ADMIN-04**: Admins can upload audio files or reference existing uploads for comped tasks
+- **FR-ADMIN-05**: Admins can configure format, custom instructions, and assignment rules for comped tasks
+- **FR-ADMIN-06**: System calculates estimated cost based on average creator payouts by tier
+- **FR-ADMIN-07**: System validates comped task creation against monthly budget before allowing creation
+
+**Approval Workflow:**
+
+- **FR-ADMIN-08**: Batches with fewer than 10 tasks are auto-approved (single admin authority)
+- **FR-ADMIN-09**: Batches with 10-50 tasks require second admin approval with justification
+- **FR-ADMIN-10**: Batches with more than 50 tasks require finance or executive approval
+- **FR-ADMIN-11**: Approval requests include business justification and cost estimate
+- **FR-ADMIN-12**: Approver sees real-time budget impact analysis before approving
+
+**Budget Management:**
+
+- **FR-ADMIN-13**: Platform administrators can set monthly comped task budget (system-configurable)
+- **FR-ADMIN-14**: Admins see real-time budget usage with percentage and remaining funds
+- **FR-ADMIN-15**: System blocks batch creation if monthly budget would be exceeded
+- **FR-ADMIN-16**: Budget resets automatically on first day of each month
+- **FR-ADMIN-17**: Executives can override budget limits with required business justification
+
+**Task Lifecycle:**
+
+- **FR-ADMIN-18**: Comped tasks enter same task routing queue as client-paid tasks (no preferential treatment)
+- **FR-ADMIN-19**: Creators cannot distinguish comped tasks from paid tasks (maintains role isolation)
+- **FR-ADMIN-20**: Comped tasks go through identical QA review process as paid tasks
+- **FR-ADMIN-21**: Approved comped tasks count toward creator tier progression
+- **FR-ADMIN-22**: Rejected comped tasks result in no creator payment (same quality incentive as paid tasks)
+- **FR-ADMIN-23**: Admins can cancel unclaimed comped tasks before creator claims (no cost incurred)
+- **FR-ADMIN-24**: In-progress or completed comped tasks cannot be cancelled (creator time commitment honored)
+
+**Payout Handling:**
+
+- **FR-ADMIN-25**: QA-approved comped tasks are included in weekly creator payout batch
+- **FR-ADMIN-26**: Comped task payouts are flagged separately in weekly payout summary for financial tracking
+- **FR-ADMIN-27**: Admins review and approve comped task payouts in weekly batch before release
+- **FR-ADMIN-28**: Platform absorbs all comped task creator earnings as operating expense
+
+**Audit & Reporting:**
+
+- **FR-ADMIN-29**: All comped task actions are logged with admin ID, timestamp, and action type
+- **FR-ADMIN-30**: Admin dashboard displays active comped batches with real-time progress
+- **FR-ADMIN-31**: Admins can view batch detailed progress (completed count, QA pending, cancelled)
+- **FR-ADMIN-32**: Monthly audit report shows total cost, ROI metrics, and partnership conversion tracking
+- **FR-ADMIN-33**: Admins can export comped task data in CSV format for external analysis
+- **FR-ADMIN-34**: System automatically flags suspicious patterns (same admin/creator pairs, abnormal volume)
+
+**Delivery & Quality Control:**
+
+- **FR-ADMIN-35**: Admins can download all completed tasks from a batch in bulk
+- **FR-ADMIN-36**: Admins can review comped task quality before delivering to external partners
+- **FR-ADMIN-37**: Admins can request revision on comped tasks (task re-enters QA queue)
+- **FR-ADMIN-38**: Comped tasks are marked with batch_id and business label in database for tracking
+
+**System Integration:**
+
+- **FR-ADMIN-39**: Comped tasks appear in creator "Available Tasks" queue with no visual distinction
+- **FR-ADMIN-40**: Comped task completion triggers identical notifications as paid task completion
+- **FR-ADMIN-41**: Analytics dashboard separates comped task metrics from paid task metrics
+- **FR-ADMIN-42**: Financial reports track comped task costs as "Customer Acquisition" or "Training Expense" operating category
+
+**Use Cases:**
+
+- **Partnership Trials:** Enterprise prospects trial 20-50 tasks before committing to annual plan (CAC investment)
+- **Sales Demos:** Generate high-quality sample content for sales presentations and pitch decks
+- **Creator Training:** Provide practice tasks for new creators with real audio and QA feedback
+- **Service Recovery:** Offer complimentary tasks to clients after dispute resolution to rebuild trust
+
+**Financial Model:**
+
+- Estimated monthly budget: $1,000-$2,000 in creator payouts
+- Expected ROI: 30% partnership trial conversion rate yields $30,000+ ARR per $600 trial investment
+- Budget controls and approval workflows prevent cost overruns
+
 ### Fraud Prevention & Security
 
 - **FR57**: System can capture device fingerprints for all new account registrations
