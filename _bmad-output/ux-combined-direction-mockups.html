@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jabur - Combined Direction Mockups (Clean + Glass)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F9FAFB;
+            color: #111827;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #2563EB 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #6B7280;
+            max-width: 700px;
+            margin: 0 auto 24px;
+        }
+
+        .decision-box {
+            background: linear-gradient(135deg, #EFF6FF 0%, #D1FAE5 100%);
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 48px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .decision-box h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1E40AF;
+        }
+
+        .decision-box p {
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .mockup-section {
+            margin-bottom: 96px;
+        }
+
+        .mockup-header {
+            margin-bottom: 32px;
+        }
+
+        .mockup-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .mockup-header .persona-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #2563EB;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .mockup-header .persona-tag.creator {
+            background: #10B981;
+        }
+
+        .mockup-header p {
+            color: #6B7280;
+            font-size: 16px;
+            max-width: 700px;
+        }
+
+        .mockup-container {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* Alex's Dashboard - Premium Glass */
+        .glass-hero {
+            background: linear-gradient(135deg, #EFF6FF 0%, #D1FAE5 100%);
+            padding: 48px;
+            border-radius: 20px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 40px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .label {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+        }
+
+        /* Maria's Canvas - Zero Distraction */
+        .canvas-container {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .canvas-header {
+            padding: 24px 32px;
+            border-bottom: 1px solid #F3F4F6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .canvas-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .canvas-editor {
+            padding: 64px;
+            min-height: 500px;
+            background: #FFFFFF;
+        }
+
+        .canvas-editor-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .canvas-editor h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6B7280;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .editor-placeholder {
+            border: 2px dashed #E5E7EB;
+            border-radius: 8px;
+            padding: 32px;
+            color: #9CA3AF;
+            font-size: 15px;
+            line-height: 1.7;
+            min-height: 300px;
+        }
+
+        /* Maria's Dashboard - Subtle Glass */
+        .task-selection {
+            padding: 32px;
+        }
+
+        .task-card-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s;
+        }
+
+        .task-card-glass:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .task-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .task-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #10B981;
+        }
+
+        .task-meta {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        /* Status badges */
+        .badge {
+            display: inline-flex;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+
+        .badge-warning {
+            background: #FEF3C7;
+            color: #92400E;
+        }
+
+        .badge-info {
+            background: #DBEAFE;
+            color: #1E40AF;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #2563EB;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1E40AF;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563EB;
+            border: 1px solid #2563EB;
+        }
+
+        .btn-secondary:hover {
+            background: #EFF6FF;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 32px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563EB 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: #6B7280;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #2563EB;
+        }
+
+        .nav-link.active {
+            color: #2563EB;
+            font-weight: 600;
+        }
+
+        .comparison-section {
+            margin-top: 64px;
+            padding: 32px;
+            background: #F9FAFB;
+            border-radius: 16px;
+        }
+
+        .comparison-section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #111827;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .comparison-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2563EB;
+            margin-bottom: 12px;
+        }
+
+        .comparison-item p {
+            color: #6B7280;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .canvas-editor {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Clean + Glassmorphism Combined</h1>
+            <p>The perfect balance: premium aesthetics where they delight, zero distraction where focus matters.</p>
+
+            <div class="decision-box">
+                <h3>🎯 Team Decision Summary</h3>
+                <p><strong>Alex's Dashboard:</strong> Full glassmorphism treatment - signals premium quality and professionalism</p>
+                <p><strong>Maria's Task Selection:</strong> Subtle glass cards - valued professional without distraction</p>
+                <p><strong>Maria's Canvas:</strong> Pure minimalism - soft shadows only, zero glass effects for maximum flow state</p>
+                <p><strong>Technical Strategy:</strong> Progressive enhancement with 3-layer approach for accessibility</p>
+            </div>
+        </header>
+
+        <!-- Alex's Dashboard -->
+        <div class="mockup-section">
+            <div class="mockup-header">
+                <span class="persona-tag">👔 Alex - Content Uploader</span>
+                <h2>Alex's Dashboard Experience</h2>
+                <p>Premium glassmorphism signals quality and professionalism. The clean spacious layout makes scanning project status effortless while glass effects create visual delight and depth.</p>
+            </div>
+
+            <div class="mockup-container">
+                <div class="nav">
+                    <div class="logo">jabur</div>
+                    <div class="nav-links">
+                        <a href="#" class="nav-link active">Dashboard</a>
+                        <a href="#" class="nav-link">Projects</a>
+                        <a href="#" class="nav-link">Upload</a>
+                        <a href="#" class="nav-link">Account</a>
+                    </div>
+                </div>
+
+                <div class="glass-hero">
+                    <div class="glass-card">
+                        <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 12px;">Welcome back, Alex!</h2>
+                        <p style="font-size: 16px; color: #6B7280;">You have 3 deliveries ready for review</p>
+
+                        <div class="stats-grid" style="margin-top: 32px;">
+                            <div class="stat-card">
+                                <span class="number" style="color: #2563EB;">5</span>
+                                <span class="label">Active Projects</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="number" style="color: #10B981;">12</span>
+                                <span class="label">Completed</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="number" style="color: #111827;">$450</span>
+                                <span class="label">Spent This Month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 16px; color: #111827;">Recent Projects</h3>
+                </div>
+
+                <div class="project-card">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h3>Marketing Automation Podcast Ep 12</h3>
+                            <p style="color: #6B7280; font-size: 14px; margin-bottom: 8px;">Executive Summary • Blog Post</p>
+                        </div>
+                        <span class="badge badge-success">Delivered</span>
+                    </div>
+                    <div class="project-meta">
+                        <span style="font-size: 14px; color: #6B7280;">2/2 deliverables complete</span>
+                        <button class="btn btn-primary">View Results</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h3>Personal Finance Deep Dive</h3>
+                            <p style="color: #6B7280; font-size: 14px; margin-bottom: 8px;">Key Insights • Social Media Pack</p>
+                        </div>
+                        <span class="badge badge-warning">In Progress</span>
+                    </div>
+                    <div class="project-meta">
+                        <span style="font-size: 14px; color: #6B7280;">Creator working • ETA: 18 hours</span>
+                        <button class="btn btn-secondary">Track Progress</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <h3>Leadership Insights #45</h3>
+                            <p style="color: #6B7280; font-size: 14px; margin-bottom: 8px;">Summary • Reflection Questions</p>
+                        </div>
+                        <span class="badge badge-info">Awaiting Review</span>
+                    </div>
+                    <div class="project-meta">
+                        <span style="font-size: 14px; color: #6B7280;">Ready for your feedback</span>
+                        <button class="btn btn-primary">Review Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maria's Task Selection -->
+        <div class="mockup-section">
+            <div class="mockup-header">
+                <span class="persona-tag creator">✍️ Maria - Content Creator (Task Selection)</span>
+                <h2>Maria's Task Selection Experience</h2>
+                <p>Subtle glass effects signal value and professionalism without overwhelming. Clean layout makes browsing available tasks effortless and delightful.</p>
+            </div>
+
+            <div class="mockup-container">
+                <div class="nav">
+                    <div class="logo">jabur</div>
+                    <div class="nav-links">
+                        <a href="#" class="nav-link active">Available Tasks</a>
+                        <a href="#" class="nav-link">My Work</a>
+                        <a href="#" class="nav-link">Earnings</a>
+                        <a href="#" class="nav-link">Account</a>
+                    </div>
+                </div>
+
+                <div class="glass-hero" style="padding: 32px;">
+                    <div class="glass-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 8px;">Hey Maria!</h2>
+                                <p style="color: #6B7280;">5 tasks match your expertise (Mid-Level Tier)</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 32px; font-weight: 700; color: #10B981;">$340</div>
+                                <div style="font-size: 14px; color: #6B7280;">This week's earnings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task-selection">
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: #111827;">Available Tasks</h3>
+
+                    <div class="task-card-glass">
+                        <div class="task-header">
+                            <div>
+                                <div class="task-title">Marketing Automation Podcast Ep 12</div>
+                                <div class="task-meta" style="margin-top: 4px;">Executive Summary • 1,200 words • Due in 48h</div>
+                            </div>
+                            <div class="task-value">$25</div>
+                        </div>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #F3F4F6; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 13px; color: #6B7280;">Tier: Mid-Level • Audio: 45 min</span>
+                            <button class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Claim Task</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card-glass">
+                        <div class="task-header">
+                            <div>
+                                <div class="task-title">Personal Finance Deep Dive</div>
+                                <div class="task-meta" style="margin-top: 4px;">Blog Post • 1,500 words • Due in 36h</div>
+                            </div>
+                            <div class="task-value">$45</div>
+                        </div>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #F3F4F6; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 13px; color: #6B7280;">Tier: Mid-Level • Audio: 60 min</span>
+                            <button class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Claim Task</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card-glass">
+                        <div class="task-header">
+                            <div>
+                                <div class="task-title">Leadership Insights #45</div>
+                                <div class="task-meta" style="margin-top: 4px;">Key Insights • 800 words • Due in 24h</div>
+                            </div>
+                            <div class="task-value">$30</div>
+                        </div>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #F3F4F6; display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-size: 13px; color: #6B7280;">Tier: Mid-Level • Audio: 35 min</span>
+                            <button class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Claim Task</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maria's Canvas -->
+        <div class="mockup-section">
+            <div class="mockup-header">
+                <span class="persona-tag creator">✍️ Maria - Content Creator (Canvas)</span>
+                <h2>Maria's Creation Canvas Experience</h2>
+                <p><strong>Zero distraction.</strong> Pure white background, soft shadows only, maximum breathing room. This is where Maria enters flow state - every pixel serves focus and clarity.</p>
+            </div>
+
+            <div class="mockup-container" style="padding: 0;">
+                <div class="canvas-container">
+                    <div class="canvas-header">
+                        <div>
+                            <h3>Marketing Automation Podcast Ep 12 - Executive Summary</h3>
+                            <span style="font-size: 13px; color: #6B7280;">Due in 46 hours • Auto-saved 2 minutes ago</span>
+                        </div>
+                        <div style="display: flex; gap: 12px;">
+                            <button class="btn btn-secondary" style="padding: 8px 16px; font-size: 13px;">Save Draft</button>
+                            <button class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">Submit</button>
+                        </div>
+                    </div>
+
+                    <div class="canvas-editor">
+                        <div class="canvas-editor-content">
+                            <h4>Acceptance Criteria</h4>
+                            <div style="background: #F9FAFB; padding: 16px; border-radius: 8px; margin-bottom: 32px; font-size: 14px; line-height: 1.6; color: #374151;">
+                                <p style="margin-bottom: 8px;">✓ 1,000-1,200 words capturing main themes</p>
+                                <p style="margin-bottom: 8px;">✓ Include 3-5 key takeaways with supporting details</p>
+                                <p style="margin-bottom: 8px;">✓ Professional tone matching podcast style</p>
+                                <p>✓ No jargon unless explained</p>
+                            </div>
+
+                            <h4>Your Content</h4>
+                            <div class="editor-placeholder">
+                                <p style="margin-bottom: 16px;">Marketing automation has evolved from simple email scheduling to sophisticated, AI-driven customer journey orchestration...</p>
+                                <p style="margin-bottom: 16px; opacity: 0.5;">[Clean, distraction-free writing space with generous line height (1.7) and optimal reading width (700px max)]</p>
+                                <p style="opacity: 0.3;">[No glass effects, no gradients, no visual flourishes - just pure focus on the content]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Section -->
+        <div class="comparison-section">
+            <h3>Design Strategy Across Personas</h3>
+            <div class="comparison-grid">
+                <div class="comparison-item">
+                    <h4>👔 Alex (Uploader)</h4>
+                    <p><strong>Goal:</strong> Signal premium quality, build confidence</p>
+                    <p><strong>Approach:</strong> Full glassmorphism treatment with gradient hero sections, glass project cards, and depth cues</p>
+                    <p><strong>Psychology:</strong> "This platform invested in design = they'll invest in my content quality"</p>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>✍️ Maria - Task Selection (Creator)</h4>
+                    <p><strong>Goal:</strong> Feel valued, browse efficiently</p>
+                    <p><strong>Approach:</strong> Subtle glass effects on task cards, clean spacious layout, gentle hover states</p>
+                    <p><strong>Psychology:</strong> "This platform respects my professionalism without overwhelming me"</p>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>✍️ Maria - Canvas (Creator)</h4>
+                    <p><strong>Goal:</strong> Enter flow state instantly, zero distraction</p>
+                    <p><strong>Approach:</strong> Pure white background, soft shadows only, generous margins (64px), optimal line height (1.7)</p>
+                    <p><strong>Psychology:</strong> "Nothing here but me and my craft - the platform disappears"</p>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>🎯 Technical Implementation</h4>
+                    <p><strong>Layer 1 (Core):</strong> Solid backgrounds, works everywhere - Maria's canvas uses ONLY this</p>
+                    <p><strong>Layer 2 (Enhanced):</strong> Moderate glass effects - Alex's dashboard, Maria's task selection</p>
+                    <p><strong>Layer 3 (Premium):</strong> Full effects on high-performance devices - optional enhancement</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # BMM Workflow Status for: jabur
 # Generated: 2025-12-21
-# Last Updated: 2025-12-26
+# Last Updated: 2025-12-27
 
 project_name: jabur
 project_type: product-brief
@@ -27,16 +27,20 @@ workflows_completed:
     input_documents_count: 4
     recovery_note: "Re-run on 2025-12-26 after metadata corruption recovery. Archived files used as reference."
 
+  create-ux-design:
+    status: completed
+    output_file: "_bmad-output/ux-design-specification/"
+    completed_date: "2025-12-27"
+    steps_completed: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    input_documents_count: 4
+    sharded: true
+    sharded_sections: 76
+    recovery_note: "Re-run on 2025-12-27 with new PRD. Archived UX file used as reference. Document sharded for efficiency."
+
 workflows_archived:
   # These workflows were completed 2025-12-23/24 but files lost frontmatter metadata
   # Archived to _bmad-output/archive-recovered-20251226/ for reference
   # Need to be re-run with proper BMAD frontmatter structure
-
-  create-ux-design:
-    status: requires_regeneration
-    archived_file: "_bmad-output/archive-recovered-20251226/ux-design-specification.md"
-    original_completed_date: "2025-12-23"
-    archive_note: "Content preserved but frontmatter lost in PDF conversion"
 
   create-architecture:
     status: missing
@@ -81,37 +85,29 @@ workflows_in_progress:
     pause_note: "Paused pending completion of recovery workflows (UX, Architecture, Epics)"
 
 recommended_next_workflows:
-  - workflow: create-ux-design
-    reason: "Re-run UX Design workflow with new PRD as input and archived UX file as reference"
-    priority: high
-    input_documents:
-      - "_bmad-output/prd.md"
-      - "_bmad-output/archive-recovered-20251226/ux-design-specification.md"
-
   - workflow: create-architecture
-    reason: "Re-run Architecture workflow (file completely missing from recovery)"
+    reason: "Re-run Architecture workflow (file completely missing from recovery). UX Design now complete."
     priority: high
     input_documents:
       - "_bmad-output/prd.md"
-      - "_bmad-output/ux-design-specification.md"
+      - "_bmad-output/ux-design-specification/"
       - "_bmad-output/archive-recovered-20251226/prd.md"
       - "_bmad-output/archive-recovered-20251226/ux-design-specification.md"
-    depends_on: ["create-ux-design"]
 
   - workflow: create-epics-and-stories
     reason: "Re-run Epics workflow with new PRD + UX + Architecture and archived epics as reference"
     priority: high
     input_documents:
       - "_bmad-output/prd.md"
-      - "_bmad-output/ux-design-specification.md"
+      - "_bmad-output/ux-design-specification/"
       - "_bmad-output/architecture.md"
       - "_bmad-output/archive-recovered-20251226/epics.md"
-    depends_on: ["create-ux-design", "create-architecture"]
+    depends_on: ["create-architecture"]
 
   - workflow: generate-project-context
     reason: "Regenerate project context with new planning documents"
     priority: medium
-    depends_on: ["create-ux-design", "create-architecture", "create-epics-and-stories"]
+    depends_on: ["create-architecture", "create-epics-and-stories"]
 
   - workflow: sprint-planning
     reason: "Regenerate sprint status tracking with new epics"
@@ -121,7 +117,7 @@ recommended_next_workflows:
   - workflow: check-implementation-readiness
     reason: "Re-validate implementation readiness with new planning documents"
     priority: medium
-    depends_on: ["create-ux-design", "create-architecture", "create-epics-and-stories"]
+    depends_on: ["create-architecture", "create-epics-and-stories"]
 
   - workflow: dev-story
     reason: "Resume Story 1.1 implementation after recovery workflows complete"

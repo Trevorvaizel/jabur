@@ -1,0 +1,158 @@
+# generated: 2025-12-24
+# project: jabur
+# project_key: jabur-001
+# tracking_system: file-system
+# story_location: _bmad-output
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2025-12-24
+project: jabur
+project_key: jabur-001
+tracking_system: file-system
+story_location: _bmad-output
+
+development_status:
+  epic-1: in-progress
+  1-1-initialize-nextjs-15-project-with-typescript: in-progress
+  1-2-set-up-database-schema-for-users-and-auth: backlog
+  1-3-implement-client-registration-flow: backlog
+  1-4-implement-creator-registration-flow: backlog
+  1-5-implement-email-password-login: backlog
+  1-6-implement-oauth-google-authentication: backlog
+  1-7-implement-role-isolation-middleware: backlog
+  1-8-create-role-specific-dashboards: backlog
+  1-9-implement-device-fingerprinting: backlog
+  1-10-implement-2fa-optional-for-users-mandatory-for-admins: backlog
+  1-11-implement-email-normalization-for-fraud-prevention: backlog
+  epic-1-retrospective: optional
+
+  epic-2: backlog
+  2-1-set-up-cloud-storage-for-audio-files: backlog
+  2-2-implement-resumable-audio-file-upload: backlog
+  2-3-implement-real-time-upload-progress-tracking: backlog
+  2-4-implement-multiple-output-type-selection: backlog
+  2-5-integrate-assemblyai-for-audio-transcription: backlog
+  2-6-implement-transcription-status-tracking: backlog
+  2-7-display-transcription-results-to-client: backlog
+  epic-2-retrospective: optional
+
+  epic-3: backlog
+  3-1-implement-creator-application-workflow: backlog
+  3-2-implement-admin-creator-application-review: backlog
+  3-3-implement-database-driven-5-tier-creator-level-system: backlog
+  3-4-implement-creator-level-progression-tracking: backlog
+  epic-3-retrospective: optional
+
+  epic-4: backlog
+  4-1-create-database-schema-for-tasks-and-assignments: backlog
+  4-2-implement-task-creation-from-transcribed-audio: backlog
+  4-3-implement-creator-task-browse-and-filter: backlog
+  4-4-implement-bundled-task-atomic-reservation: backlog
+  4-5-implement-audio-player-with-synced-transcript: backlog
+  4-6-implement-block-based-editor-with-auto-save: backlog
+  4-7-implement-draft-management-with-version-history: backlog
+  4-8-implement-creator-earnings-dashboard: backlog
+  epic-4-retrospective: optional
+
+  epic-5: backlog
+  5-1-create-review-queue-for-editors: backlog
+  5-2-implement-side-by-side-review-interface: backlog
+  5-3-implement-rubric-based-scoring-system: backlog
+  5-4-implement-inline-commenting-and-feedback: backlog
+  5-5-implement-approve-revise-reject-workflow: backlog
+  5-6-integrate-plagiarism-detection: backlog
+  5-7-implement-creator-performance-tracking: backlog
+  5-8-implement-account-flagging-system: backlog
+  epic-5-retrospective: optional
+
+  epic-6: backlog
+  6-1-set-up-m-pesa-integration-for-client-payments: backlog
+  6-2-implement-client-payment-flow-with-m-pesa-stk-push: backlog
+  6-3-implement-stripe-integration-for-card-payments: backlog
+  6-4-implement-subscription-tier-pricing: backlog
+  6-5-implement-weekly-creator-payouts: backlog
+  6-6-implement-m-pesa-b2c-for-creator-payouts: backlog
+  6-7-implement-transparent-pricing-calculator: backlog
+  6-8-implement-payment-fraud-monitoring: backlog
+  epic-6-retrospective: optional
+
+  epic-7: backlog
+  7-1-set-up-socketio-for-real-time-updates: backlog
+  7-2-implement-email-notifications-for-key-events: backlog
+  7-3-implement-in-app-notification-center: backlog
+  7-4-implement-web-push-notifications: backlog
+  7-5-implement-editor-creator-messaging-per-assignment: backlog
+  epic-7-retrospective: optional
+
+  epic-8: backlog
+  8-1-implement-client-dashboard-with-usage-analytics: backlog
+  8-2-implement-creator-dashboard-with-performance-and-earnings: backlog
+  8-3-implement-admin-platform-dashboard: backlog
+  8-4-implement-creator-level-statistics: backlog
+  8-5-implement-data-export-functionality: backlog
+  epic-8-retrospective: optional
+
+  epic-9: backlog
+  9-1-implement-comped-task-creation: backlog
+  9-2-implement-direct-task-assignment: backlog
+  9-3-implement-task-reassignment-workflow: backlog
+  9-4-implement-bulk-upload-via-csv: backlog
+  9-5-implement-creator-level-management: backlog
+  9-6-implement-flag-resolution-workflow: backlog
+  9-7-implement-complete-audit-trail: backlog
+  epic-9-retrospective: optional
+
+  epic-10: backlog
+  10-1-implement-email-normalization-shared-with-epic-1: backlog
+  10-2-implement-velocity-checking-and-rate-limiting: backlog
+  10-3-implement-behavioral-anomaly-detection: backlog
+  10-4-implement-creator-client-collusion-detection: backlog
+  10-5-implement-payment-fraud-monitoring-shared-with-epic-6: backlog
+  epic-10-retrospective: optional
+
+  epic-11: backlog
+  11-1-implement-upload-content-screening: backlog
+  11-2-implement-user-reporting-mechanism: backlog
+  11-3-implement-moderation-queue-with-action-workflow: backlog
+  11-4-implement-platform-content-policy-enforcement: backlog
+  epic-11-retrospective: optional
+
+  epic-12: backlog
+  12-1-implement-dispute-filing-workflow: backlog
+  12-2-implement-mediation-interface: backlog
+  12-3-implement-resolution-execution: backlog
+  12-4-implement-appeal-process: backlog
+  epic-12-retrospective: optional
+
+  epic-13: backlog
+  13-1-implement-cloud-storage-lifecycle-policy: backlog
+  13-2-implement-daily-cleanup-job: backlog
+  epic-13-retrospective: optional
