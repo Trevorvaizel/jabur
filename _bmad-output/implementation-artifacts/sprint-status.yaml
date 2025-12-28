@@ -1,0 +1,195 @@
+# generated: 2025-12-28
+# project: jabur
+# project_key: jabur
+# tracking_system: file-system
+# story_location: c:\Users\OMEN\Documents\K2M\jabur\_bmad-output\implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2025-12-28
+project: jabur
+project_key: jabur
+tracking_system: file-system
+story_location: c:\Users\OMEN\Documents\K2M\jabur\_bmad-output\implementation-artifacts
+
+development_status:
+  # Epic 1: Project Foundation & Infrastructure
+  epic-1: in-progress
+  1-1-initialize-nextjs-14-project-with-typescript-and-tailwind: ready-for-dev
+  1-2-configure-railway-postgresql-and-prisma-orm: backlog
+  1-3-set-up-nextauthjs-v5-authentication-foundation: backlog
+  1-4-implement-role-isolation-layer-1-route-groups: backlog
+  1-5-implement-role-isolation-layer-2-middleware: backlog
+  1-6-implement-role-isolation-layer-3-postgresql-rls-policies: backlog
+  1-7-configure-redis-and-real-time-infrastructure: backlog
+  1-8-set-up-background-job-processing-with-bullmq: backlog
+  1-9-integrate-payment-sdks-stripe-and-mpesa: backlog
+  1-10-integrate-transcription-apis-assemblyai-and-whisper: backlog
+  1-11-configure-aws-s3-and-cloudfront-for-file-storage: backlog
+  1-12-set-up-testing-infrastructure-jest-react-testing-library-playwright: backlog
+  1-13-integrate-socketio-with-task-lifecycle-events: backlog
+  epic-1-retrospective: optional
+
+  # Epic 2: User Authentication & Account Management
+  epic-2: backlog
+  2-1-uploader-registration-with-email-password: backlog
+  2-2-uploader-login-and-session-management: backlog
+  2-3-creator-application-with-portfolio-submission: backlog
+  2-4-qa-editor-registration-with-mfa-totp: backlog
+  2-5-admin-registration-with-mfa-totp: backlog
+  2-6-payout-method-selection-stripe-mpesa: backlog
+  2-7-gdpr-data-export-functionality: backlog
+  2-8-account-deletion-with-30-day-purge: backlog
+  2-9-device-fingerprinting-and-email-normalization: backlog
+  2-10-multi-account-detection-system: backlog
+  epic-2-retrospective: optional
+
+  # Epic 3: Content Upload & Transcription Pipeline
+  epic-3: backlog
+  3-1-multipart-audio-upload-with-resume-capability: backlog
+  3-2-output-format-selection-9-options: backlog
+  3-3-turnaround-tier-selection-and-pricing: backlog
+  3-4-assemblyai-transcription-processing: backlog
+  3-5-whisper-failover-for-transcription: backlog
+  3-6-timestamp-aligned-transcript-generation: backlog
+  3-7-task-creation-and-creator-queue-routing: backlog
+  3-8-real-time-task-status-updates-via-socketio: backlog
+  3-9-audio-auto-deletion-7-day-lifecycle: backlog
+  3-10-transcript-auto-deletion-30-day-lifecycle: backlog
+  3-11-assemblyai-webhook-handler-integration: backlog
+  epic-3-retrospective: optional
+
+  # Epic 4: Creator Workspace & Task Management
+  epic-4: backlog
+  4-1-task-queue-with-tier-based-filtering: backlog
+  4-2-atomic-task-claiming-with-optimistic-locking: backlog
+  4-3-24-hour-claim-timeout-enforcement: backlog
+  4-4-audio-player-with-waveform-visualization-wavesurferjs: backlog
+  4-5-variable-speed-playback-controls: backlog
+  4-6-keyboard-shortcuts-for-audio-navigation: backlog
+  4-7-transcript-audio-synchronized-navigation: backlog
+  4-8-rich-text-block-editor-with-tiptap: backlog
+  4-9-auto-save-every-30-seconds: backlog
+  4-10-plagiarism-score-check-integration: backlog
+  4-11-ai-detection-score-check-integration: backlog
+  4-12-content-submission-for-qa-review: backlog
+  4-13-submission-history-view: backlog
+  4-14-real-time-tier-progression-display: backlog
+  4-15-creator-earnings-dashboard: backlog
+  4-16-offline-mode-and-auto-save-failure-handling: backlog
+  epic-4-retrospective: optional
+
+  # Epic 5: Quality Assurance System
+  epic-5: backlog
+  5-1-qa-review-queue-with-sorting-and-filtering: backlog
+  5-2-side-by-side-review-view: backlog
+  5-3-6-dimension-rubric-scoring-system: backlog
+  5-4-inline-comments-on-submissions: backlog
+  5-5-approve-submission-4-0-5-0-threshold: backlog
+  5-6-reject-submission-with-actionable-feedback: backlog
+  5-7-override-other-qa-reviews: backlog
+  5-8-qa-performance-analytics-dashboard: backlog
+  5-9-uploader-revision-requests-max-3: backlog
+  5-10-flag-creator-accounts-for-quality-issues: backlog
+  5-11-download-delivered-content-md-pdf-docx: backlog
+  5-12-delivery-notifications-to-uploaders: backlog
+  5-13-deliverable-auto-deletion-90-day-lifecycle: backlog
+  epic-5-retrospective: optional
+
+  # Epic 6: Creator Advancement & Compensation
+  epic-6: backlog
+  6-1-auto-assign-initial-tier-level-probationary: backlog
+  6-2-auto-promote-based-on-performance-criteria: backlog
+  6-3-admin-manual-tier-promotion-demotion: backlog
+  6-4-apply-tier-multiplier-to-task-payouts: backlog
+  6-5-calculate-weekly-earnings-with-audit-trail: backlog
+  6-6-weekly-payout-batch-processing-stripe-mpesa: backlog
+  6-7-stripe-payout-integration: backlog
+  6-8-mpesa-payout-integration: backlog
+  6-9-failed-payment-retry-queue: backlog
+  6-10-generate-1099-tax-forms-us-creators: backlog
+  6-11-achievement-notifications-on-tier-advancement: backlog
+  epic-6-retrospective: optional
+
+  # Epic 7: Admin Operations & Platform Management
+  epic-7: backlog
+  7-1-comprehensive-dispute-context-view: backlog
+  7-2-audio-and-submission-history-review: backlog
+  7-3-full-message-history-access: backlog
+  7-4-decision-support-tools-with-templates: backlog
+  7-5-process-refunds-with-tracking: backlog
+  7-6-admin-analytics-dashboard: backlog
+  7-7-manually-flag-accounts-for-investigation: backlog
+  7-8-complete-audit-log-access: backlog
+  7-9-full-read-access-across-roles-rls-bypass: backlog
+  7-10-log-all-admin-actions: backlog
+  7-11-auto-flag-suspicious-patterns-hourly-detection: backlog
+  7-12-integration-failure-alerts-5-minute-detection: backlog
+  7-13-stripe-webhook-processing: backlog
+  7-14-mpesa-callback-processing: backlog
+  epic-7-retrospective: optional
+
+  # Epic 8: Admin Comped Task Management
+  epic-8: backlog
+  8-1-create-comped-task-batch-with-business-context: backlog
+  8-2-configure-task-assignment-rules: backlog
+  8-3-calculate-and-display-cost-estimates: backlog
+  8-4-set-and-track-monthly-budget: backlog
+  8-5-validate-budget-before-batch-creation: backlog
+  8-6-executive-budget-override: backlog
+  8-7-auto-approve-small-batches-10-tasks: backlog
+  8-8-require-second-admin-approval-10-50-tasks: backlog
+  8-9-executive-approval-for-large-batches-50-tasks: backlog
+  8-10-route-comped-tasks-through-standard-queue: backlog
+  8-11-apply-identical-qa-review-process: backlog
+  8-12-enable-task-cancellation-rules: backlog
+  8-13-include-comped-tasks-in-weekly-payout-batch: backlog
+  8-14-admin-review-and-approve-comped-payouts: backlog
+  8-15-display-active-batch-dashboard-with-progress: backlog
+  8-16-generate-monthly-audit-reports-with-roi: backlog
+  8-17-auto-flag-suspicious-comped-task-patterns: backlog
+  8-18-bulk-download-and-quality-review: backlog
+  8-19-admin-configure-payout-amounts: backlog
+  epic-8-retrospective: optional
+
+  # Epic 9: Compliance & Data Management
+  epic-9: backlog
+  9-1-self-service-data-export-gdpr-ccpa: backlog
+  9-2-account-deletion-with-30-day-purge: backlog
+  9-3-cookie-consent-management-gdpr: backlog
+  9-4-auto-delete-audio-files-after-7-days: backlog
+  9-5-auto-delete-transcripts-and-submissions-after-30-days: backlog
+  9-6-auto-delete-delivered-content-after-90-days: backlog
+  9-7-retain-payment-records-for-7-years: backlog
+  9-8-legal-hold-and-dispute-data-exemption: backlog
+  9-9-enforce-tls-1-3-and-aes-256-encryption: backlog
+  9-10-device-fingerprinting-and-email-normalization: backlog
+  9-11-multi-account-detection-and-role-separation: backlog
+  epic-9-retrospective: optional
