@@ -76,7 +76,7 @@ export class TaskFactory {
       title: overrides.title || faker.lorem.sentence({ min: 3, max: 8 }),
       description: overrides.description || faker.lorem.paragraph(),
       audioUrl: overrides.audioUrl || faker.internet.url() + '/audio.mp3',
-      reward: overrides.reward ?? faker.number.float({ min: 5, max: 100, precision: 0.01 }),
+      reward: overrides.reward ?? faker.number.float({ min: 5, max: 100, fractionDigits: 2 }),
       deadline: overrides.deadline || faker.date.future({ years: 0.1 }),
       status: overrides.status || 'AVAILABLE',
       creatorId: creatorId,

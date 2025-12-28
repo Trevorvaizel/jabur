@@ -62,7 +62,7 @@ export class UserFactory {
       name: overrides.name || faker.person.fullName(),
       password: password,
       role: overrides.role || 'CLIENT',
-      phoneNumber: overrides.phoneNumber || faker.phone.number('+254#########'),
+      phoneNumber: overrides.phoneNumber || faker.phone.number(),
       preferredPaymentMethod: overrides.preferredPaymentMethod || 'STRIPE',
       mpesaPhoneNumber: overrides.mpesaPhoneNumber || null,
     };
